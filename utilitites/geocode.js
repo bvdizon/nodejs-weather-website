@@ -31,7 +31,6 @@ const geocode = (address, callback) => {
           longitude: response.data.features[0].center[0],
           location: response.data.features[0].place_name,
         });
-        console.log(response.data);
       }
     })
     .catch((error) => {

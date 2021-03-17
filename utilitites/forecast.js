@@ -19,7 +19,6 @@ const forecast = (latitude, longitude, callback) => {
         callback('Please enter valid coordinates, and try again', undefined);
       } else {
         callback(undefined, response.data);
-        console.log(response.data);
       }
     })
     .catch((error) => {
