@@ -26,7 +26,7 @@ enterAddress.addEventListener('submit', (e) => {
 
   forecast.innerHTML = '<h3>Loading ... </h3>';
 
-  const url = `http://localhost:3000/weather?address=${encodeURIComponent(
+  const url = `/weather?address=${encodeURIComponent(
     enterAddressForm.address.value
   )}`;
 

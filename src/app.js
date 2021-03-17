@@ -6,7 +6,7 @@ const geocode = require('../utilitites/geocode.js');
 const forecast = require('../utilitites/forecast.js');
 
 const app = express(); // instantiating express
-const port = 3000; // defining the port to render
+const port = process.env.PORT || 3000; // defining the port to render
 
 // Define paths for express configuration
 const publicDirectory = path.join(__dirname, '../public'); // declaring the path to the public folder
