@@ -1,11 +1,12 @@
 console.log('Client-side javascript file is loaded');
-const forecast = document.getElementById('forecast');
+const foreCast = document.getElementById('forecast');
 const enterAddressForm = document.getElementById('enterAddress');
 const searchForm = document.getElementById('address');
 
 // function called if fetch is successful
 const showResult = (data, address) => {
   const {
+    forecast,
     temperature,
     weather,
     location: { name, localtime: time, region },
@@ -13,10 +14,11 @@ const showResult = (data, address) => {
 
   let insertHTML = `  
     <h2>Weather in <span id="address">${address}</span></h2>
-    <p id="weatherForecast">The temperature in ${address} now is at ${temperature} degrees. As of ${time}, near ${name} in ${region} is experiencing ${weather}.</p>
+    <p>${forecast}</p>
+    <p id="weatherForecast">As of ${time}, it is ${weather} near ${name} in ${region}.</p>
   `;
 
-  forecast.innerHTML = insertHTML;
+  foreCast.innerHTML = insertHTML;
   enterAddressForm.reset();
 };
 
@@ -24,14 +26,14 @@ const showResult = (data, address) => {
 enterAddress.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  forecast.innerHTML = '<h3>Loading ... </h3>';
+  foreCast.innerHTML = '<h3>Loading ... </h3>';
 
   const url = `/weather?address=${encodeURIComponent(
     enterAddressForm.address.value
   )}`;
 
   if (enterAddressForm.address.value === '') {
-    return (forecast.innerHTML = '<h3>Please enter a valid address</h3>');
+    return (foreCast.innerHTML = '<h3>Please enter a valid address</h3>');
   }
 
   fetch(url)

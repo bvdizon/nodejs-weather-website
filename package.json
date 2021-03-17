@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
-    "startdev": "node src/app.js -e js,hbs"
+    "startdev": "nodemon src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "Brian Dizon",

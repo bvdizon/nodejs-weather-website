@@ -48,7 +48,7 @@ app.get('/weather', (req, res) => {
         current: { weather_descriptions, temperature },
       } = respForecast;
 
-      const forecast = `It is currently ${temperature} degrees out in ${name}.`;
+      const forecast = `It is currently ${temperature} degrees out in ${location}.`;
 
       res.send({
         forecast,
