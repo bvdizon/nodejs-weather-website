@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Node.js</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="container" id="main">
+      {{>header}}
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        illum pariatur quasi, accusantium amet ullam tempora, quidem ratione
+        deserunt libero veniam debitis odit alias, minus voluptate animi nisi
+        nam magni!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus
+        tempore culpa quo cumque dolores totam dicta iste blanditiis, est
+        ratione.
+      </p>
+
+      <form id="enterAddress">
+        <input type="text" name="address" id="address">
+        <input type="submit" value="Check Forecast">
+      </form>
+      
+      <div id="forecast">
+      </div>
+
+    </main>
+
+    {{>footer}}
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
